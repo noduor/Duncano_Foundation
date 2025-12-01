@@ -143,7 +143,7 @@
 }
 
 .initiative-item h4 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 0.75rem;
     font-size: 1.2rem;
 }
@@ -249,7 +249,7 @@
     box-shadow: var(--shadow);
     text-align: center;
     transition: var(--transition);
-    border-top: 4px solid var(--primary-color);
+    border-top: 4px solid var(--secondary-color);
 }
 
 .initiative-item:hover {
@@ -263,7 +263,7 @@
 }
 
 .initiative-item h4 {
-    color: var(--primary-color);
+    color: #946500;
     margin-bottom: 0.75rem;
     font-size: 1.2rem;
 }
