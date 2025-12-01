@@ -1,0 +1,304 @@
+/* Programs Page Specific Styles */
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(rgba(10, 33, 71, 0.9), rgba(10, 33, 71, 0.9)), url('../images/programs-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text);
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Programs Navigation */
+.programs-nav {
+    background: var(--background-light);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.program-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+}
+
+.program-tab {
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.7rem;
+}
+
+.program-tab:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.program-tab.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Programs Content */
+.programs-content {
+    padding: 1rem 0;
+}
+
+.program-details {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.program-details.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.program-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.program-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.program-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.program-description {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Key Initiatives */
+.key-initiatives {
+    margin-bottom: 2rem;
+}
+
+.key-initiatives h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.initiative-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border-top: 4px solid var(--primary-color);
+}
+
+.initiative-item:hover {
+    transform: translateY(-5px);
+}
+
+.initiative-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.initiative-item h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.initiative-item p {
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Program Impact */
+.program-impact {
+    background: var(--background-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.program-impact p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Program CTA */
+.program-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .program-tabs {
+        gap: 0.25rem;
+    }
+    
+    .program-tab {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .program-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .program-subtitle {
+        font-size: 1rem;
+    }
+    
+    .initiatives-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .initiative-item {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .program-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    
+    .program-tab {
+        flex-shrink: 0;
+    }
+    
+    .page-header {
+        padding: 2.5rem 0;
+    }
+    
+    .programs-content {
+        padding: 2rem 0;
+    }
+}
+
+/* Key Initiatives */
+.key-initiatives {
+    margin-bottom: 2rem;
+}
+
+.key-initiatives h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.initiative-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+    border-top: 4px solid var(--secondary-color);
+}
+
+.initiative-item:hover {
+    transform: translateY(-5px);
+}
+
+.initiative-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.initiative-item h4 {
+    color: #946500;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.initiative-item p {
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .initiatives-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        gap: 1rem;
+    }
+    
+    .initiative-item {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .initiatives-grid {
+        gap: 0.75rem;
+    }
+    
+    .initiative-item {
+        padding: 1rem;
+    }
+    
+    .initiative-item i {
+        font-size: 2rem;
+    }
+    
+    .initiative-item h4 {
+        font-size: 1.1rem;
+    }
+}
