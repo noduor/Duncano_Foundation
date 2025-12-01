@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(programId).classList.add('active');
             
             // Scroll to top of program content
-            document.querySelector('.programs-content').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+});
         });
     });
 
