@@ -78,3 +78,59 @@ function initAnimations() {
         fadeInObserver.observe(element);
     });
 }
+
+// Mobile Menu Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    const menuOverlay = document.createElement('div');
+    
+    // Create overlay
+    menuOverlay.className = 'menu-overlay';
+    document.body.appendChild(menuOverlay);
+    
+    // Toggle mobile menu
+    mobileMenuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navList.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        document.body.style.overflow = navList.classList.contains('active') ? 'hidden' : '';
+    });
+    
+    // Close menu when clicking overlay
+    menuOverlay.addEventListener('click', function() {
+        mobileMenuToggle.classList.remove('active');
+        navList.classList.remove('active');
+        this.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-list a').forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenuToggle.classList.remove('active');
+            navList.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 767) {
+            mobileMenuToggle.classList.remove('active');
+            navList.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Touch device card flip optimization
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {
+        document.querySelectorAll('.initiative-card').forEach(card => {
+            card.addEventListener('touchstart', function() {
+                this.classList.toggle('active');
+            }, { passive: true });
+        });
+    }
+});

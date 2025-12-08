@@ -299,3 +299,555 @@
     }
 }
 
+/* ============================================
+   POLICY PAGES MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Base Mobile Styles */
+@media (max-width: 992px) {
+    .policy-content {
+        padding: 2rem 0;
+    }
+    
+    .policy-container {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Tablet & Large Mobile (768px - 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+    .policy-container {
+        padding: 2rem;
+    }
+    
+    .policy-section {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .policy-section h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+    /* Page Header */
+    .page-header {
+        padding: 2rem 0;
+        min-height: auto;
+    }
+    
+    .page-header h1 {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+        padding: 0 20px;
+        line-height: 1.3;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+        padding: 0 20px;
+        line-height: 1.5;
+    }
+    
+    /* Policy Content */
+    .policy-content {
+        padding: 1.5rem 0;
+        background: var(--background-light);
+    }
+    
+    .policy-container {
+        margin: 0 15px;
+        padding: 1.25rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        line-height: 1.6;
+    }
+    
+    /* Policy Sections */
+    .policy-section {
+        margin-bottom: 1.75rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .policy-section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .policy-section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+        font-weight: 600;
+        line-height: 1.3;
+    }
+    
+    .policy-section h3 {
+        font-size: 1.1rem;
+        margin: 1.25rem 0 0.75rem 0;
+        color: var(--secondary-color);
+        font-weight: 600;
+        line-height: 1.3;
+    }
+    
+    .policy-section h4 {
+        font-size: 1rem;
+        margin: 1rem 0 0.5rem 0;
+        color: var(--text-color);
+        font-weight: 600;
+    }
+    
+    .policy-section p {
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+        color: var(--text-color);
+        line-height: 1.5;
+    }
+    
+    /* Lists */
+    .policy-section ul,
+    .policy-section ol {
+        margin: 0.75rem 0;
+        padding-left: 1.25rem;
+    }
+    
+    .policy-section li {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: var(--text-color);
+    }
+    
+    .policy-section ul ul,
+    .policy-section ul ol,
+    .policy-section ol ul,
+    .policy-section ol ol {
+        margin: 0.5rem 0 0.5rem 1rem;
+    }
+    
+    /* Ordered list numbering */
+    .policy-section ol {
+        counter-reset: item;
+        padding-left: 1.25rem;
+    }
+    
+    .policy-section ol > li {
+        counter-increment: item;
+        margin-bottom: 0.5rem;
+    }
+    
+    .policy-section ol > li:before {
+        content: counters(item, ".") ". ";
+        font-weight: bold;
+        color: var(--primary-color);
+        font-size: 0.9rem;
+    }
+    
+    /* Links */
+    .policy-section a {
+        color: var(--accent-color);
+        word-break: break-word;
+        overflow-wrap: break-word;
+        display: inline-block;
+        max-width: 100%;
+    }
+    
+    .policy-section a:hover {
+        color: var(--primary-color);
+    }
+    
+    /* Strong text */
+    .policy-section strong {
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+    
+    /* Footer Links */
+    .footer-links {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+    .footer-links a {
+        font-size: 0.9rem;
+        padding: 0.25rem 0;
+        display: inline-block;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    .footer-links a.active {
+        color: var(--accent-color);
+        font-weight: 600;
+    }
+}
+
+/* Small Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+    .page-header {
+        padding: 1.5rem 0;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem;
+        padding: 0 15px;
+    }
+    
+    .page-header p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+    
+    .policy-content {
+        padding: 1rem 0;
+    }
+    
+    .policy-container {
+        margin: 0 10px;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    .policy-section {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.25rem;
+    }
+    
+    .policy-section h2 {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .policy-section h3 {
+        font-size: 1rem;
+        margin: 1rem 0 0.5rem 0;
+    }
+    
+    .policy-section h4 {
+        font-size: 0.95rem;
+        margin: 0.75rem 0 0.25rem 0;
+    }
+    
+    .policy-section p {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .policy-section ul,
+    .policy-section ol {
+        padding-left: 1rem;
+    }
+    
+    .policy-section li {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .policy-section ol > li:before {
+        font-size: 0.85rem;
+    }
+    
+    .footer-links {
+        gap: 0.5rem;
+        padding: 0 10px;
+    }
+    
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+}
+
+/* Policy Tables (Mobile Responsive) */
+@media (max-width: 767px) {
+    .policy-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 1rem 0;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 0.85rem;
+    }
+    
+    .policy-table table {
+        min-width: 500px;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .policy-table th,
+    .policy-table td {
+        padding: 0.75rem 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .policy-table th {
+        background: var(--primary-color);
+        color: white;
+        font-weight: 600;
+        position: sticky;
+        left: 0;
+        white-space: nowrap;
+    }
+    
+    .policy-table tr:last-child td {
+        border-bottom: none;
+    }
+    
+    .policy-table tr:nth-child(even) {
+        background: rgba(10, 33, 71, 0.03);
+    }
+    
+    /* Stacked table layout for very small screens */
+    .policy-table.stacked {
+        overflow-x: visible;
+    }
+    
+    .policy-table.stacked table {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .policy-table.stacked tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    
+    .policy-table.stacked td {
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+        padding: 0.75rem;
+    }
+    
+    .policy-table.stacked td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--primary-color);
+        display: block;
+        margin-bottom: 0.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .policy-table.stacked th {
+        display: none;
+    }
+}
+
+/* Landscape Mode Adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    .page-header {
+        padding: 1rem 0;
+    }
+    
+    .policy-content {
+        padding: 1rem 0;
+    }
+    
+    .policy-container {
+        padding: 1rem;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .policy-section a:active {
+        opacity: 0.8;
+    }
+    
+    .footer-links a:active {
+        opacity: 0.8;
+    }
+    
+    .policy-table {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .page-header {
+        background: linear-gradient(rgba(10, 33, 71, 0.92), rgba(10, 33, 71, 0.92));
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    .policy-section a,
+    .footer-links a {
+        transition: none;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .policy-container {
+        background: #1a1a1a;
+        color: #e0e0e0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    
+    .policy-section {
+        border-bottom-color: #333;
+    }
+    
+    .policy-section h2 {
+        color: #4a90e2;
+    }
+    
+    .policy-section h3 {
+        color: #ff6b6b;
+    }
+    
+    .policy-section p,
+    .policy-section li {
+        color: #e0e0e0;
+    }
+    
+    .policy-section strong {
+        color: #4a90e2;
+    }
+    
+    .policy-section a {
+        color: #64b5f6;
+    }
+    
+    .policy-section ol > li:before {
+        color: #4a90e2;
+    }
+    
+    .policy-table th {
+        background: #2a2a2a;
+    }
+    
+    .policy-table tr:nth-child(even) {
+        background: rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .page-header {
+        background: none !important;
+        color: #000 !important;
+        padding: 1rem 0 !important;
+    }
+    
+    .policy-container {
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: none !important;
+    }
+    
+    .policy-content {
+        background: none !important;
+        padding: 0 !important;
+    }
+    
+    .policy-section {
+        page-break-inside: avoid;
+        border-bottom: 1px solid #ddd !important;
+        margin-bottom: 1.5rem !important;
+        padding-bottom: 1rem !important;
+    }
+    
+    .policy-section h2 {
+        page-break-after: avoid;
+        color: #000 !important;
+    }
+    
+    .policy-table {
+        page-break-inside: avoid;
+        border: 1px solid #ddd !important;
+    }
+    
+    .policy-table th {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .header, .footer, .footer-links {
+        display: none !important;
+    }
+    
+    a {
+        color: #000 !important;
+        text-decoration: underline !important;
+    }
+    
+    .policy-section a:after {
+        content: " (" attr(href) ")";
+        font-size: 0.9em;
+        color: #666;
+    }
+    
+    .policy-section a[href^="#"]:after {
+        content: "";
+    }
+}
+
+/* Long Content Handling */
+.policy-section {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.policy-section p,
+.policy-section li {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+/* Enhanced Mobile Table Styling (for JavaScript integration) */
+.policy-table-wrapper {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.policy-table-wrapper .scroll-indicator {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 33, 71, 0.8);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media (max-width: 767px) {
+    .policy-table-wrapper .scroll-indicator {
+        display: block;
+    }
+    
+    .policy-table-wrapper.scrolled .scroll-indicator {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+}
