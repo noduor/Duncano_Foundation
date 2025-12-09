@@ -700,17 +700,17 @@
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
     .policy-container {
-        background: #1a1a1a;
-        color: #e0e0e0;
+        background: #ffffff;
+        color: #000000;
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
     
     .policy-section {
-        border-bottom-color: #333;
+        border-bottom-color: #cfcfcf;
     }
     
     .policy-section h2 {
-        color: #4a90e2;
+        color: #002c5f;
     }
     
     .policy-section h3 {
@@ -719,23 +719,23 @@
     
     .policy-section p,
     .policy-section li {
-        color: #e0e0e0;
+        color: #2c2c2c;
     }
     
     .policy-section strong {
-        color: #4a90e2;
+        color: #00559b;
     }
     
     .policy-section a {
-        color: #64b5f6;
+        color: #00559b;
     }
     
     .policy-section ol > li:before {
-        color: #4a90e2;
+        color: #00559b;
     }
     
     .policy-table th {
-        background: #2a2a2a;
+        background: #00559b;
     }
     
     .policy-table tr:nth-child(even) {

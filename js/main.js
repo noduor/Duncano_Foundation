@@ -134,3 +134,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get current page URL
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.nav-list a');
+    
+    // Remove active class from all links first
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Add active class to current page link
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        
+        // Check if this link matches current page
+        if (linkHref === currentPage) {
+            link.classList.add('active');
+        }
+        
+        // Special case for index.html (home page)
+        if (currentPage === 'index.html' || currentPage === '' || currentPage === '/') {
+            if (linkHref === 'index.html' || linkHref === '/' || linkHref === './') {
+                link.classList.add('active');
+            }
+        }
+    });
+});

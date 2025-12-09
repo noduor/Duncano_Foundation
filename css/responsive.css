@@ -1,0 +1,1194 @@
+/* ============================================
+   GLOBAL MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Base Mobile Styles */
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    /* Header adjustments */
+    .header .container {
+        padding-right: 140px; /* Space for donate button */
+    }
+}
+
+/* Tablet & Large Mobile (768px - 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+    /* Header & Navigation */
+    .header {
+        padding: 0.75rem 0;
+    }
+    
+    .logo img {
+        height: 60px;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+        z-index: 1001;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 30px 30px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+    }
+    
+    .nav-list.active {
+        right: 0;
+    }
+    
+    .nav-list li {
+        margin: 0 0 1.5rem 0;
+        width: 100%;
+    }
+    
+    .nav-list a {
+        display: block;
+        font-size: 1.1rem;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+    }
+    
+    /* Mobile menu animation */
+    .mobile-menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background-color: var(--light-text);
+        margin: 3px 0;
+        transition: var(--transition);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    /* Overlay when menu is open */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    
+    .menu-overlay.active {
+        display: block;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 3rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.75rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        padding: 0 10px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0 20px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    /* Section Headers */
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-header h2::after {
+        width: 60px;
+        height: 2px;
+        bottom: -6px;
+    }
+    
+    /* Mission Section */
+    .mission-overview {
+        padding: 2rem 0;
+    }
+    
+    .mission-content {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+    
+    /* Initiatives Grid with Flip Cards */
+    .initiatives-preview {
+        padding: 2rem 0;
+    }
+    
+    .initiatives-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .initiative-card {
+        height: 220px;
+        perspective: 800px; /* Reduced for mobile */
+    }
+    
+    .card-front i {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .card-front h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-front, .card-back {
+        padding: 1.25rem;
+        border-radius: 10px;
+    }
+    
+    .card-back p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 1.5rem 0 0.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-logo img {
+        height: 55px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .social-links a {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .footer-bottom {
+        padding-top: 1rem;
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+    
+    /* Touch Device Optimizations */
+    @media (hover: none) {
+        .initiative-card:hover .card-inner {
+            transform: none;
+        }
+        
+        .initiative-card.active .card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .btn:hover {
+            transform: none;
+        }
+        
+        .btn:active {
+            transform: scale(0.98);
+        }
+    }
+}
+
+/* Small Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .hero {
+        padding: 2.5rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .initiatives-grid {
+        gap: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .initiative-card {
+        height: 200px;
+    }
+    
+    .card-front, .card-back {
+        padding: 1rem;
+    }
+}
+
+/* ============================================
+   POLICY PAGES MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 767px) {
+    /* Page Header */
+    .page-header {
+        padding: 2rem 0;
+        min-height: auto;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0 15px;
+        line-height: 1.3;
+    }
+    
+    .page-header p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+        line-height: 1.5;
+    }
+    
+    /* Policy Content */
+    .policy-content {
+        padding: 1rem 0;
+        background: var(--background-light);
+    }
+    
+    .policy-container {
+        margin: 0 10px;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        line-height: 1.6;
+    }
+    
+    /* Policy Sections */
+    .policy-section {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .policy-section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .policy-section h2 {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .policy-section h3 {
+        font-size: 1rem;
+        margin: 1rem 0 0.5rem 0;
+        line-height: 1.3;
+    }
+    
+    .policy-section h4 {
+        font-size: 0.95rem;
+        margin: 0.75rem 0 0.25rem 0;
+    }
+    
+    .policy-section p {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+    
+    /* Lists */
+    .policy-section ul,
+    .policy-section ol {
+        padding-left: 1rem;
+    }
+    
+    .policy-section li {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.4;
+    }
+    
+    /* Policy Tables (Mobile Responsive) */
+    .policy-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 1rem 0;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 0.85rem;
+    }
+    
+    .policy-table table {
+        min-width: 500px;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .policy-table th,
+    .policy-table td {
+        padding: 0.75rem 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .policy-table th {
+        background: var(--primary-color);
+        color: white;
+        font-weight: 600;
+        position: sticky;
+        left: 0;
+        white-space: nowrap;
+    }
+    
+    .policy-table tr:last-child td {
+        border-bottom: none;
+    }
+}
+
+/* ============================================
+   DONATION PAGE MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 767px) {
+    /* Page Header */
+    .page-header {
+        padding: 2rem 0;
+        min-height: auto;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem;
+        padding: 0 15px;
+        line-height: 1.3;
+    }
+    
+    .page-header p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+        line-height: 1.5;
+    }
+    
+    /* Donation Content */
+    .donation-content {
+        padding: 1rem 0;
+    }
+    
+    .donation-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    /* Form Container */
+    .form-container {
+        padding: 1rem;
+        margin: 0 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .form-container h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Form Sections */
+    .form-section {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.25rem;
+    }
+    
+    .form-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+        text-align: center;
+    }
+    
+    /* Form Groups */
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: 1px solid var(--border-color);
+    }
+    
+    /* Amount Options */
+    .amount-options {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .amount-btn {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Frequency Options */
+    .frequency-options {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .radio-option {
+        padding: 0.75rem;
+        width: 100%;
+    }
+    
+    /* Payment Methods */
+    .payment-methods {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .payment-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    /* Donation Info Sidebar */
+    .donation-info {
+        gap: 1.25rem;
+    }
+    
+    .info-card {
+        padding: 1rem;
+        margin: 0 10px;
+    }
+    
+    .info-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Impact Stats */
+    .impact-item {
+        padding: 0.75rem;
+        gap: 0.75rem;
+    }
+    
+    .impact-text h4 {
+        font-size: 0.95rem;
+    }
+    
+    .impact-text p {
+        font-size: 0.8rem;
+    }
+    
+    /* Trust Section */
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .trust-item {
+        padding: 1rem;
+        margin: 0 10px;
+    }
+}
+
+/* ============================================
+   CONTACT PAGE MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 767px) {
+    /* Page Header */
+    .page-header {
+        padding: 2rem 0;
+        min-height: auto;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem;
+        padding: 0 15px;
+        line-height: 1.3;
+    }
+    
+    .page-header p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+        line-height: 1.5;
+    }
+    
+    /* Contact Content */
+    .contact-content {
+        padding: 1rem 0;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    /* Contact Information */
+    .info-card,
+    .contact-form-section,
+    .map-section {
+        padding: 1rem;
+        margin: 0 10px;
+    }
+    
+    .info-card h2,
+    .contact-form-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    /* Contact Items */
+    .contact-item {
+        padding: 0.75rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-icon {
+        margin-bottom: 0.5rem;
+    }
+    
+    .contact-text h4 {
+        font-size: 0.95rem;
+    }
+    
+    .contact-text p {
+        font-size: 0.85rem;
+    }
+    
+    /* Map Section */
+    .map-placeholder {
+        height: 150px;
+        padding: 0.75rem;
+    }
+    
+    /* FAQ Flip Cards */
+    .faq-section {
+        padding: 1.5rem 0;
+    }
+    
+    .faq-card {
+        height: 160px;
+        perspective: 800px;
+    }
+    
+    .faq-card-front, .faq-card-back {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    .faq-card-front h3,
+    .faq-card-back h3 {
+        font-size: 0.95rem;
+    }
+    
+    .faq-card-back p {
+        font-size: 0.8rem;
+    }
+    
+    /* Touch device adjustment for flip cards */
+    @media (hover: none) {
+        .faq-card:hover .faq-card-inner {
+            transform: none;
+        }
+        
+        .faq-card.active .faq-card-inner {
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+/* ============================================
+   ABOUT PAGE MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 767px) {
+    /* Page Header */
+    .page-header {
+        padding: 2rem 0;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem;
+        padding: 0 15px;
+    }
+    
+    .page-header p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+    
+    /* History Section */
+    .history-section,
+    .mission-vision-section,
+    .operations-section,
+    .team-section {
+        padding: 1.25rem 0;
+    }
+    
+    .history-stats {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .stat-card {
+        padding: 0.75rem;
+    }
+    
+    .stat-number {
+        font-size: 1.25rem;
+    }
+    
+    /* Mission & Vision */
+    .mv-card {
+        padding: 1.25rem;
+        margin: 0 10px;
+    }
+    
+    .mv-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .mv-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Operations */
+    .operations-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .operation-item {
+        padding: 0.75rem;
+        margin: 0 10px;
+    }
+    
+    /* Team */
+    .team-grid {
+        gap: 0.75rem;
+    }
+    
+    .team-card {
+        margin: 0 10px;
+    }
+    
+    .team-image {
+        height: 180px;
+    }
+    
+    .team-info {
+        padding: 1rem;
+    }
+    
+    .team-info h3 {
+        font-size: 1rem;
+    }
+    
+    .team-bio {
+        font-size: 0.85rem;
+    }
+}
+
+/* ============================================
+   FLIP CARD ANIMATIONS FOR MOBILE
+   ============================================ */
+
+/* Initiative Flip Cards */
+.initiative-card .card-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.initiative-card .card-front,
+.initiative-card .card-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.initiative-card .card-back {
+    transform: rotateY(180deg);
+}
+
+/* FAQ Flip Cards */
+.faq-card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.faq-card-front,
+.faq-card-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.faq-card-back {
+    transform: rotateY(180deg);
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .initiative-card .card-inner,
+    .faq-card-inner {
+        transition: none;
+    }
+}
+
+
+/* Desktop underline indicator */
+.nav-list {
+    position: relative; /* For positioning the underline */
+}
+
+/* underline element */
+.nav-list::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: green; 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 160, 0, 0.3);
+}
+
+/* Individual link container for desktop */
+.nav-list li {
+    position: relative;
+}
+
+/* Active link styling */
+.nav-list a.active {
+    color: var(--secondary-color) !important;
+    font-weight: 600;
+}
+
+/* Remove the old static underline */
+.nav-list a.active::after {
+    display: none;
+}
+
+/* Mobile underline indicator */
+@media (max-width: 767px) {
+    .nav-list::after {
+        display: none; /* Hide moving underline on mobile */
+    }
+    
+    /* Mobile active indicator */
+    .nav-list a.active {
+        position: relative;
+    }
+    
+    .nav-list a.active::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 20px;
+        background-color: var(--secondary-color);
+        border-radius: 0 2px 2px 0;
+        animation: slideInLeft 0.3s ease-out;
+    }
+    
+    @keyframes slideInLeft {
+        from {
+            transform: translateY(-50%) translateX(-10px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(-50%) translateX(0);
+            opacity: 1;
+        }
+    }
+}
+/* ============================================
+   MOBILE NAVIGATION FIXES FOR YOUR STRUCTURE
+   ============================================ */
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    /* Fix header layout */
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding-right: 50px;
+    }
+    
+    /* Logo size */
+    .logo img {
+        height: 50px;
+    }
+    
+    /* Donate button positioning */
+    .donate-btn-container {
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        transform: translateY(-50%);
+        z-index: 1002;
+    }
+    
+    .donate-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    /* Hamburger menu button - VISIBLE on mobile */
+    .mobile-menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1003;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+    
+    .mobile-menu-toggle span {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Hamburger animation when active */
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Navigation menu - HIDDEN by default on mobile */
+    .nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--primary-color);
+        z-index: 1001;
+        padding: 80px 30px 30px;
+        overflow-y: auto;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+    
+    /* Show navigation when active */
+    .nav.active {
+        display: block;
+        animation: slideIn 0.3s ease-out;
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    
+    /* Navigation list */
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-list li {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .nav-list a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: color 0.3s ease;
+    }
+    
+    .nav-list a:hover,
+    .nav-list a.active {
+        color: var(--secondary-color);
+    }
+    
+    /* Menu overlay */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+    }
+    
+    .menu-overlay.active {
+        display: block;
+    }
+    
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
+        height: 100vh;
+    }
+}
+
+/* Desktop styles - hide hamburger, show nav */
+@media (min-width: 768px) {
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    
+    .nav {
+        display: block !important;
+    }
+    
+    .nav-list {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-list a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-list a:hover,
+    .nav-list a.active {
+        color: var(--secondary-color);
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .header .container {
+        padding-right: 45px;
+    }
+    
+    .donate-btn-container {
+        right: 40px;
+    }
+    
+    .donate-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .mobile-menu-toggle {
+        right: 10px;
+        width: 25px;
+        height: 20px;
+    }
+    
+    .nav {
+        width: 85%;
+        padding: 70px 20px 20px;
+    }
+    
+    .nav-list a {
+        font-size: 1.1rem;
+        padding: 12px 0;
+    }
+}
+
+/* ============================================
+   FIX FOR CLICKABLE MOBILE NAV LINKS
+   ============================================ */
+
+@media (max-width: 767px) {
+    /* Make sure nav and everything inside is clickable */
+    .nav.active {
+        pointer-events: auto !important;
+    }
+    
+    /* Make ALL nav children clickable */
+    .nav.active * {
+        pointer-events: auto !important;
+    }
+    
+    /* Specifically make links clickable */
+    .nav-list a {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        position: relative !important;
+        z-index: 10000 !important;
+    }
+    
+    /* Make list items clickable */
+    .nav-list li {
+        pointer-events: auto !important;
+        position: relative !important;
+        z-index: 10000 !important;
+    }
+    
+    /* Make the entire nav list clickable */
+    .nav-list {
+        pointer-events: auto !important;
+        position: relative !important;
+        z-index: 10000 !important;
+    }
+    
+    /* Ensure nothing is covering the nav */
+    .nav {
+        pointer-events: auto !important;
+    }
+    
+    /* Fix overlay - should NOT block clicks when menu is open */
+    .menu-overlay.active {
+        pointer-events: none !important;
+    }
+    
+    /* But overlay should block clicks to close menu */
+    .menu-overlay {
+        pointer-events: auto !important;
+    }
+}

@@ -19,30 +19,39 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Header/Navigation -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="Duncano Foundation Logo">
-                </a>
-            </div>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="programs.html">Our Programs</a></li>
-                    <li><a href="donation.html">Donate</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Duncano Foundation Logo">
+            </a>
         </div>
-    </header>
+        
+        <!-- Donate button -->
+        <div class="donate-btn-container">
+            <a href="donation.html" class="donate-btn">
+                <span>Donate</span>
+            </a>
+        </div>
+        
+        <!-- Hamburger button moved OUTSIDE nav -->
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <!-- Navigation -->
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="programs.html">Our Programs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -291,5 +300,6 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/mobile.js" ></script>
 </body>
 </html>
